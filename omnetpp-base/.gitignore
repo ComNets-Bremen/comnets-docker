@@ -1,0 +1,4 @@
+# Ignore tarballs. They should be downloaded from OMNeT++ directly
+*.tgz
+*.tar.gz
+*.swp
