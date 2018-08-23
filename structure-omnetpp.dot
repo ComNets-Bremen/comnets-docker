@@ -1,9 +1,0 @@
- digraph omnetppbranch {
-    ubuntu[label="Ubuntu 16.04"]
-    omnetppbase[label="OMNeT++ base"]
-    opsbase[label="OPS base"]
-    opsHb13[label="Paper: HB13"]
-
-    ubuntu -> omnetppbase -> opsbase
-     omnetppbase -> opsHb13
- }
