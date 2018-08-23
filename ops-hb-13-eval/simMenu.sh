@@ -43,6 +43,13 @@ sim_error(){
     whiptail --title "Simulation finished" --msgbox "The simulation exited with an error. Please check the log files in the corresponding output directory for further information." $WT_HEIGHT $WT_WIDTH
 }
 
+# Start a shell
+start_shell(){
+    echo "Type \"exit\" to return to the main menu"
+    /bin/sh
+    sleep 2
+}
+
 # Simulation A
 do_sim_a(){
     calc_wt_size
@@ -118,7 +125,8 @@ while $IN_MENU; do
         "1 :" "Simulation A"\
         "2 :" "Simulation B"\
         "3 :" "Simulation C"\
-        "4 :" "Exit"\
+        "4 :" "Start a shell"\
+        "5 :" "Exit"\
         3>&1 1>&2 2>&3)
 
     RET=$?
@@ -131,7 +139,8 @@ while $IN_MENU; do
             1\ *) do_sim_a ;;
             2\ *) do_sim_b ;;
             3\ *) do_sim_c ;;
-            4\ *) IN_MENU=false ;;
+            4\ *) start_shell ;;
+            5\ *) IN_MENU=false ;;
             *)  whiptail --msgbox "Programmer error: unrecognized option" 20 60 1 ;;
         esac || whiptail --msgbox "There was an error running option $FUN" 20 60 1
     else
