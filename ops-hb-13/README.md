@@ -1,9 +1,9 @@
-ops-base
-========
+ops-hb-13
+=========
 
 This image contains a basic 
 (OPS)[https://github.com/ComNets-Bremen/OPS] (Opportunistic Protocol Simulator)
-installation.
+installation (branch: Submission-HB13)
 
 Author
 ------
