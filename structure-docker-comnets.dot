@@ -1,0 +1,13 @@
+ digraph omnetppbranch {
+    ubuntu18[label="Ubuntu 18.04"]
+    ubuntu16[label="Ubuntu 16.04"]
+    omnetppbase521[label="OMNeT++ base\n(Tag omnetpp-5.2.1)"]
+    omnetppbase541[label="OMNeT++ base\n(Tag omnetpp-5.4.1)"]
+    opsbase[label="OPS base\n(branch master)"]
+    opsHb13[label="Paper: HB13\n(OPS branch Submission-HB13)"]
+
+    ubuntu16 -> omnetppbase521
+    ubuntu18 -> omnetppbase541
+    omnetppbase521 -> opsHb13
+    omnetppbase541 -> opsbase
+ }
