@@ -29,5 +29,9 @@ RUN make -j $(nproc)
 # The output directory for the simulation results
 RUN mkdir -p simulations/out
 
-CMD /bin/sh
+# Cleanup
+RUN apt-get clean
+RUN rm -rf /var/lib/apt
+
+CMD ["bash"]
 #CMD cat README.md
