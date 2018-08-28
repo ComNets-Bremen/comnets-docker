@@ -26,3 +26,10 @@ ops-hb-13
 This is the base OPS image for the OPS-branch `Submission-HB13` available on
 github:
 [Submission-HB13](https://github.com/ComNets-Bremen/OPS/tree/Submission-HB13)
+
+ops-hb-13-eval
+--------------
+
+This is an extension of `ops-hb-13` with a menu interface to replay the
+simulations easily.
+
