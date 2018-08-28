@@ -17,4 +17,8 @@ RUN apt-get install whiptail -y
 COPY simMenu.sh /opt/
 RUN chmod +x simMenu.sh
 
+# Cleanup
+RUN apt-get clean
+RUN rm -rf /var/lib/apt
+
 CMD ./simMenu.sh
