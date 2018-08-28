@@ -15,6 +15,7 @@
 
 SIMULATION_OUTPUT_DIR="/opt/OPS/simulations/out"
 REQUIRED_OUTPUT_DISK_SPACE=10000000 # in bytes
+REQUIRED_RAM=48000000 # in bytes
 
 # Calculate the screen dimensions for whiptail
 calc_wt_size() {
@@ -116,6 +117,18 @@ if [ $OUTPUT_SPACE -le $REQUIRED_OUTPUT_DISK_SPACE ]; then
 else
     echo "Disk space okay!"
 fi;
+
+echo "Checking available memory"
+
+AVAILABLE_RAM=$(grep MemTotal /proc/meminfo | awk '{print $2}')
+
+if [ $AVAILABLE_RAM -le $REQUIRED_RAM ]; then
+    whiptail --title "RAM" --msgbox "Some simulations require a lot of RAM.\nIt is recommended to have at least $(($REQUIRED_RAM/1000/1000)) GB available! Your machine has $(($AVAILABLE_RAM/1000/1000)) GB." $WT_HEIGHT $WT_WIDTH
+    echo "Not enough RAM"
+else
+    echo "RAM Okay!"
+fi;
+
 
 ## Environment seems to be okay. Create a menu
 
