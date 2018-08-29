@@ -47,7 +47,7 @@ sim_error(){
 # Start a shell
 start_shell(){
     echo "Type \"exit\" to return to the main menu"
-    /bin/sh
+    /bin/bash
     sleep 2
 }
 
