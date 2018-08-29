@@ -14,8 +14,8 @@
 #
 
 SIMULATION_OUTPUT_DIR="/opt/OPS/simulations/out"
-REQUIRED_OUTPUT_DISK_SPACE=10000000 # in bytes
-REQUIRED_RAM=48000000 # in bytes
+REQUIRED_OUTPUT_DISK_SPACE=100000000000000 # in bytes
+REQUIRED_RAM=40000000 # in bytes
 
 # Calculate the screen dimensions for whiptail
 calc_wt_size() {
@@ -88,6 +88,14 @@ do_sim_c(){
     fi
 }
 
+show_info_box(){
+    calc_wt_size
+	whiptail --title "Image Information" --scrolltext --textbox INFO.txt $WT_HEIGHT $WT_WIDTH
+}
+
+####
+
+show_info_box
 
 calc_wt_size
 
