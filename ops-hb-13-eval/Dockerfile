@@ -12,7 +12,7 @@ COPY README.md /opt/
 WORKDIR /opt/
 
 RUN apt-get update -y
-RUN apt-get install whiptail -y
+RUN apt-get install -y whiptail python-numpy python-matplotlib python-scipy
 
 COPY simMenu.sh /opt/
 RUN chmod +x simMenu.sh
