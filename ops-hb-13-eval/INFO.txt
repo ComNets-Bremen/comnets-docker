@@ -1,0 +1,9 @@
+This is a docker images for running a certain set of OMNeT++ simulations provided by the department of Sustainable Communication Networks, University of Bremen, Germany.
+
+Some of the simulations require a certain amount of RAM (48 GB) and plenty of disk space (several TB). One should mount an external directory to the output path to keep the simulation result. Next, this script will check the prerequisites for the simulations.
+
+For further information, please visit
+
+* ComNets Bremen: https://www.comnets.uni-bremen.de/
+* The OPS repository: https://github.com/ComNets-Bremen/OPS/
+* The dockerfile for this image: https://github.com/ComNets-Bremen/comnets-docker
